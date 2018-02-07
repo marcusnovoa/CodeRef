@@ -33,11 +33,10 @@ const users = require('./routes/users');
 
 const searches = require('./routes/searches');
 
-
 const resources = require('./routes/resources');
 
-// variable for port
-const port = 3000;
+// Variable for port
+const port = process.env.PORT || 8080;
 
 // CORS Middleware
 app.use(cors());
