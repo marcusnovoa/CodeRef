@@ -1481,13 +1481,13 @@ var ResourcesService = (function () {
         console.log('Successfully send to service');
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/resources/postresource', postResource, { headers: headers })
+        return this.http.post('resources/postresource', postResource, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     ResourcesService.prototype.getAll = function (filter) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/resources/search', filter, { headers: headers })
+        return this.http.post('resources/search', filter, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     return ResourcesService;
@@ -1537,7 +1537,7 @@ var SearchService = (function () {
         // return this.searchResult;
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/searches/search', search, { headers: headers })
+        return this.http.post('searches/search', search, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     SearchService.prototype.getHistoryResults = function () {
@@ -1590,7 +1590,7 @@ var UpdateUserService = (function () {
         // console.log(updateProfile);
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/users/update', updateProfile, { headers: headers })
+        return this.http.post('users/update', updateProfile, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     return UpdateUserService;
