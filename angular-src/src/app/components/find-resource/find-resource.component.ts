@@ -7,7 +7,7 @@ import { ResourcesService } from '../../services/resources.service';
   styleUrls: ['./find-resource.component.css']
 })
 export class FindResourceComponent implements OnInit {
-  
+
   filter = {
     title: "",
     link: "",
@@ -29,7 +29,7 @@ export class FindResourceComponent implements OnInit {
         this.posts.unshift(posts[i]);
       }
     });
-    console.log(this.posts);
+    // console.log(this.posts);
   }
 
 }

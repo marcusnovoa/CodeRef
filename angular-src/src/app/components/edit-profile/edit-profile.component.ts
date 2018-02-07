@@ -37,7 +37,7 @@ export class EditProfileComponent implements OnInit {
   onSubmit(e){
     e.preventDefault();
     this.updateUserService.updateUserProfile(this.updateProfile).subscribe(profile => {
-      console.log(profile);
+      // console.log(profile);
     });
   }
 

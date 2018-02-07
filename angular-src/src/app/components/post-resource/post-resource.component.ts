@@ -11,7 +11,7 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./post-resource.component.css']
 })
 export class PostResourceComponent implements OnInit {
-  title:string; 
+  title:string;
   category:string;
   link:string;
   description:string;
@@ -27,13 +27,13 @@ export class PostResourceComponent implements OnInit {
   ngOnInit() {
     this.authService.getProfile().subscribe(profile => {
       this.user = profile.user.username;
-      console.log(this.user);
+      // console.log(this.user);
     },
     err => {
       console.log(err);
       return false;
     });
-    
+
   }
 
   onSubmit(event){
@@ -51,14 +51,14 @@ export class PostResourceComponent implements OnInit {
     if ( this.title === '' || this.category === '' || this.link === '' || this.title === undefined || this.category === undefined || this.link === undefined)
     {
       this.flashMessage.show('Please fill in all fields' , {
-        cssClass: 'alert-danger', 
+        cssClass: 'alert-danger',
         timeout: 5000});
     } else {
-      console.log(postResource);
+      // console.log(postResource);
       this.resourcesService.postResource(postResource).subscribe(data => {
-        console.log(data);
+        // console.log(data);
         this.flashMessage.show('Your resource was submitted! Thank you.' , {
-          cssClass: 'alert-success', 
+          cssClass: 'alert-success',
           timeout: 5000});
       });
       this.router.navigate(['/dashboard']);
