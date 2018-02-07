@@ -19,7 +19,7 @@ export class SearchService {
     // return this.searchResult;
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/searches/search', search, {headers: headers})
+    return this.http.post('searches/search', search, {headers: headers})
       .map(res => res.json());
   }
 

@@ -13,7 +13,7 @@ export class UpdateUserService {
     // console.log(updateProfile);
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/users/update', updateProfile, {headers: headers})
+    return this.http.post('users/update', updateProfile, {headers: headers})
       .map(res => res.json());
   }
 }
